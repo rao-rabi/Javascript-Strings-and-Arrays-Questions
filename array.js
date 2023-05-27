@@ -40,7 +40,7 @@ let maxMin = arrMaxMin.reduce((acc, curr) => {
         acc.min = curr;
     }
     return acc;
-},{
+}, {
     max: -Infinity, min: Infinity
 });
 console.log(maxMin);
@@ -53,11 +53,50 @@ console.log(maxMin);
 
 // 6. Write a js program to count total number of even and odd elements in an array.
 
+let EvenOdd = [1, 3, 2, 4, 5, 43, 56, 7, 890];
+
+const evenOddCount = (arr) => {
+    let even = 0;
+    let odd = 0;
+    arr.map((item) => {
+        if (item % 2 == 0) {
+            even++;
+        }
+        else {
+            odd++;
+        }
+    })
+    console.log(`Total even numbers are: ${even} and odd numbers are: ${odd}`);
+}
+evenOddCount(EvenOdd);
+
 // 7. Write a js program to count total number of negative elements in an array.
+
+let negNumbers = [1, -3, 2, -4, -5, 43, -56, 7, -890];
+
+const negativeCount = (arr) => {
+    let neg = 0;
+    arr.map((item) => {
+        if (item < 0) {
+            neg++;
+        }
+    })
+    console.log(`Total negative numbers in array are: ${neg}`);
+}
+negativeCount(negNumbers);
 
 // 8. Write a js program to copy all elements from an array to another array.
 
+let arrCopy = [1, 265, 3, 4234, 5, 6, 732, 865];
+let copiedAray = arrCopy.slice();
+console.log(copiedAray);
+
 // 9. Write a js program to insert an element in an array.
+
+let arrInsert = [1,2,3,4,5];
+let numInserted = parseInt(prompt("Enter a number to insert in array."));
+arrInsert.push(numInserted);
+console.log(arrInsert);
 
 // 10. Write a js program to delete an element from an array at specified position.
 
@@ -72,6 +111,13 @@ console.log(maxMin);
 // 15. Write a js program to merge two array to third array.
 
 // 16. Write a js program to find reverse of an array.
+
+const arrReverse = [12, 13, 34, 45, 56, 67, 78, 89];
+function arrayReverse(arr) {
+    arr.reverse();
+    console.log(arr);
+}
+arrayReverse(arrReverse);
 
 // 17. Write a js program to put even and odd elements of array in two separate array.
 
