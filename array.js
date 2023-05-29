@@ -121,9 +121,45 @@ arrayReverse(arrReverse);
 
 // 17. Write a js program to put even and odd elements of array in two separate array.
 
+let arrEvenOdd = [1,2,3,4,5,6,7,8];
+let evenArr = [];
+let oddArr = [];
+function pushEvenOdd(arr) {
+    arr.forEach((item) => {
+        if(item % 2 == 0){
+            evenArr.push(item);
+        }
+        else{
+            oddArr.push(item);
+        }
+    });
+    console.log("Even numbers: " , evenArr);
+    console.log("Odd numbers: " , oddArr);
+}
+pushEvenOdd(arrEvenOdd);
+
 // 18. Write a js program to search an element in an array.
 
+let arrSearch = [1,2,3,4,5,6,7,8];
+let searchedItem = 5;
+
+arrSearch.forEach((item , index) => {
+    if(item === searchedItem){
+        console.log("The element is at index: ", index);
+    }
+})
+
 // 19. Write a js program to sort array elements in ascending or descending order.
+
+let arrSort = [2,45,12,0,47,32,8];
+
+function sorting(arr) {
+    let ascendingSort = arr.sort((a , b) => a-b );
+    console.log("Ascending order: ",ascendingSort);
+    let descendingSort = arr.sort((a, b) => b-a);
+    console.log("Descending order: ",descendingSort);
+}
+sorting(arrSort);
 
 // 20. Write a js program to sort even and odd elements of array separately.
 
