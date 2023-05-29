@@ -100,6 +100,15 @@ console.log(arrInsert);
 
 // 10. Write a js program to delete an element from an array at specified position.
 
+let arrDelete = [34,56,75,234,677];
+let specifiedElement= 234;
+const deleteFunc = () => {
+let deleteElem = arrDelete.filter((item)=>
+    item != specifiedElement)
+        console.log(deleteElem);
+}
+deleteFunc();
+
 // 11. Write a js program to count frequency of each element in an array.
 
 // 12. Write a js program to print all unique elements in the array.
@@ -162,6 +171,26 @@ function sorting(arr) {
 sorting(arrSort);
 
 // 20. Write a js program to sort even and odd elements of array separately.
+
+let arrSortEvenOdd = [1,265,3,4,670,45,36,44];
+
+let sortEven = [];
+let sortOdd = [];
+function evenOddSort(arr){
+    arr.forEach((item) => {
+        if(item % 2 == 0){
+            sortEven.push(item);
+            sortEven.sort((a,b)=> a-b);
+        }
+        else{
+            sortOdd.push(item);
+            sortOdd.sort((a,b)=> a-b);
+        }
+    })
+    console.log('Sorted Even Array: ', sortEven);
+    console.log('Sorted Odd Array: ', sortOdd);
+}
+evenOddSort(arrSortEvenOdd)
 
 // 21. Write a js program to left rotate an array.
 
