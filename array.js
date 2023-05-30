@@ -117,7 +117,18 @@ deleteFunc();
 
 // 14. Write a js program to delete all duplicate elements from an array.
 
-// 15. Write a js program to merge two array to third array.
+let arrDuplicate = [1,2,2,3,5,5];
+let duplicateRemove = arrDuplicate.filter((item, index , arr)=>{
+   return arr.indexOf(item) === index;
+})
+console.log(duplicateRemove);
+
+// // 15. Write a js program to merge two array to third array.
+
+let arr1 = [1,2,3,4,5];
+let arr2 = [6,7,8,9,0];
+let mergeArr = arr1.concat(arr2);
+console.log(mergeArr);
 
 // 16. Write a js program to find reverse of an array.
 
@@ -194,4 +205,26 @@ evenOddSort(arrSortEvenOdd)
 
 // 21. Write a js program to left rotate an array.
 
+let arrRotateLeft = [1,2,3,4,5];
+let n = 3;
+
+function rotateLeft(arr , position){
+    let len = arr.length;
+    let rotated = position % len;
+    let rotationLeft = [...arr.slice(rotated) , ...arr.slice(0, rotated)]
+    return rotationLeft;
+}
+console.log(rotateLeft(arrRotateLeft , n));
+
 // 22. Write a js program to right rotate an array.
+
+let arrRotateRight = [1,2,3,4,5];
+let n1 = 3;
+
+function rotateRight(arr, position) {
+    let len = arr.length;
+    let rotated = position % len;
+    let rotationRight = [...arr.slice(len - rotated), ...arr.slice(0, len - rotated)]
+    return rotationRight;
+}
+console.log(rotateRight(arrRotateRight , n1));
