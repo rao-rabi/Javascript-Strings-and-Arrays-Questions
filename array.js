@@ -113,7 +113,28 @@ deleteFunc();
 
 // 12. Write a js program to print all unique elements in the array.
 
+let arrUnique = [1,2,3,3,4,5,5];
+let checkedUnique = [];
+arrUnique.forEach((item) => {
+    if(!checkedUnique.includes(item)){
+        checkedUnique.push(item)
+    }
+});
+console.log(`Unique Elments array is:` , checkedUnique);
+
 // 13. Write a js program to count total number of duplicate elements in an array.
+
+let arrDuplicate1 = [1, 2, 2, 3, 5, 5];
+let dupCount = 0;
+let checkedItems = {};
+arrDuplicate1.forEach((item) => {
+    if (checkedItems[item]) {
+        dupCount++;
+    } else {
+        checkedItems[item] = true;
+    }
+});
+console.log(`Duplicate Elements in array are: ${dupCount}`);
 
 // 14. Write a js program to delete all duplicate elements from an array.
 
